@@ -8,7 +8,8 @@ with open("./app/config/logging_config.yaml", "r") as stream:
     config = yaml.load(stream, Loader=yaml.FullLoader)
 logging.config.dictConfig(config)
 
-logger = logging.getLogger("template")
+# Set logger name to project
+logger = logging.getLogger("garage")
 logger.info("START Application")
 
 # Tags for representative endpoints

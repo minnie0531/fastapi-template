@@ -3,9 +3,16 @@ import json
 import os
 
 """
-This file is to unit test query builder.
+This file is for unit test of a service.
 It compares input_data.json in test_data directory to each result.
-Query build build queries based on its own arguements.
+
+This is the example of documentation for this unit test
+
+Input data :
+    Selected arguments from the existing application
+
+Result :
+   SQL queirs which are used in Exdata
 """
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
