@@ -1,3 +1,16 @@
-/venv
+__pycache__
+.pytest_cache/
+
+
+#virtual
+venv
+
+# log
+*.log
+error.*
+
+# vscode
+.vscode/
+
+# coverage
 .coverage
-.DS_Store

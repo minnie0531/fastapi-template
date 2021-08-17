@@ -18,6 +18,6 @@ def test_read_main():
 
 
 def test_router_query():
-    response = client.get("/queries")
+    response = client.get("/routers")
     assert response.status_code == 200
     assert response.json() == ["Test endpoint"]

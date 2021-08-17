@@ -10,6 +10,6 @@ Client can access this application through GET/POST/PUT/DELETE /queries
 router = APIRouter()
 
 
-@router.get("/queries", tags=["queries"], description="Test endpoint")
+@router.get("/routers", tags=["router"], description="Test endpoint")
 def test_endpoint():
     return {"Test endpoint"}

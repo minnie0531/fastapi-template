@@ -1,12 +1,21 @@
 from fastapi import FastAPI
+from .routers import router
+import yaml
+import logging.config
 
-from .routers import query
+# Set logging configuration
+with open("./app/config/logging_config.yaml", "r") as stream:
+    config = yaml.load(stream, Loader=yaml.FullLoader)
+logging.config.dictConfig(config)
+
+logger = logging.getLogger("template")
+logger.info("START Application")
 
 # Tags for representative endpoints
 tags = [
     {
-        "name": "queries",
-        "description": "Operations with queries",
+        "name": "routers",
+        "description": "Operations with xxx",
     }
 ]
 
@@ -19,7 +28,7 @@ app = FastAPI(
 )
 
 # Add routers to main
-app.include_router(query.router)
+app.include_router(router.router)
 
 # This path is for health check or test
 @app.get("/")
