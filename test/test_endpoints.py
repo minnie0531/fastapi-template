@@ -1,5 +1,6 @@
 import os
 import sys
+import json
 from fastapi.testclient import TestClient
 
 sys.path.append(
@@ -21,3 +22,16 @@ def test_router_query():
     response = client.get("/routers")
     assert response.status_code == 200
     assert response.json() == ["Test endpoint"]
+    
+def test_redis():
+    response = client.get("/redis/set/keys/world")
+    assert response.status_code == 200
+    assert response.json() == ["Successfully registered"]
+
+    response = client.get("/redis/get/keys/world")
+    assert response.status_code == 200
+
+    with open("test/test_data/redis_input.json") as f:
+        expect_data = json.load(f)
+        
+    assert response.json() == expect_data
