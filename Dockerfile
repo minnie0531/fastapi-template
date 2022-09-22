@@ -1,4 +1,4 @@
-FROM rhel8/python-39
+FROM python:3.9-slim
   
 WORKDIR /app/
 
