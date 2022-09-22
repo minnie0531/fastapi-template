@@ -6,10 +6,10 @@ import logging.config
 # Set logging configuration
 with open("./app/config/logging_config.yaml", "r") as stream:
     config = yaml.load(stream, Loader=yaml.FullLoader)
-logging.config.dictConfig(config)
+#logging.config.dictConfig(config)
 
 # Set logger name to project
-logger = logging.getLogger("garage")
+#logger = logging.getLogger("garage")
 logger.info("START Application")
 
 # Tags for representative endpoints
