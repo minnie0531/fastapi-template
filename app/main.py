@@ -9,7 +9,7 @@ with open("./app/config/logging_config.yaml", "r") as stream:
 #logging.config.dictConfig(config)
 
 # Set logger name to project
-#logger = logging.getLogger("garage")
+logger = logging.getLogger("garage")
 logger.info("START Application")
 
 # Tags for representative endpoints
